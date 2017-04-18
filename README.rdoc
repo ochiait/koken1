@@ -1,0 +1,8 @@
+== README
+
+* Rails 4.2.8
+* Ruby 2.3.1p112
+* gem 2.5.1
+* PostgreSQLs
+
+* ...
