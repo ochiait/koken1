@@ -11,7 +11,6 @@ class RecordsController < ApplicationController
   @record = Record.new(record_params)
   @record.guardian_id = session[:guardian_id]
   @record.save
-  render :thanks
   end
 
 private
