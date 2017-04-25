@@ -1,2 +1,36 @@
-<h1>Guardians#new</h1>
-<p>Find me in app/views/guardians/new.html.erb</p>
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+  <!-- ヘッダー部分 ================ -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<%=  %>">成年後見人業務サポートサービス</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_target">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+  <!-- ヘッダー部分 終わり========== -->
+
+  <div class="container" style="padding:20px 0">
+    <%= form_for @guardian do |f| %>
+      <div class="form-group">
+        <h1>後見人新規登録</h1>
+        <%= label_tag :name, '名前', :class => 'control-label'  %>
+        <%= f.text_field :name, :class => 'form-control', :placeholder => 'name' %>
+
+        <%= label_tag :email, 'メールアドレス', :class => 'control-label'  %>
+        <%= f.text_field :email,  :class => 'form-control', :placeholder => 'email' %>
+
+        <%= label_tag :password, 'パスワード', :class => 'control-label'  %>
+        <%= f.text_field :password,  :class => 'form-control', :placeholder => 'password' %>
+
+        <%= label_tag :tel, '電話番号', :class => 'control-label'  %>
+        <%= f.text_field :tel, :class => 'form-control', :placeholder => 'TEL' %>
+      </div>
+    <div class="form-group">
+      <%= f.submit "送信" , :class => 'btn btn-primary' %>
+    </div>
+   <% end %>
+  </div>

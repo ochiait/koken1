@@ -2,7 +2,7 @@ class GuardiansController < ApplicationController
   def new
     @guardian = Guardian.new
   end
-  # データを作成
+  
   def create
     @guardian = Guardian.new(guardian_params)
     @guardian.save
