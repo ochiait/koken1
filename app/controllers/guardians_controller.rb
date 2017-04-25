@@ -9,7 +9,10 @@ class GuardiansController < ApplicationController
     render :thanks
   end
 
+private
+
   def guardian_params
     params.require(:guardian).permit(:name, :email, :password, :password_confirmation, :tel)
   end
+  
 end

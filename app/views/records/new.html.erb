@@ -1,2 +1,56 @@
-<h1>Records#new</h1>
-<p>Find me in app/views/records/new.html.erb</p>
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+  <!-- ヘッダー部分 ================ -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<%=  %>">成年後見人業務サポートサービス</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_target">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- 中央のナビゲーション部分 ================ -->
+    <div class="collapse navbar-collapse" id="nav_target">
+      <ul class="nav navbar-nav">
+          <li class="active"><a href="/records/new">訪問記録</a></li>
+          <li><a href="/records/index">記録一覧</a></li>
+          <li><a href="/pages/tbd">被後見人登録</a></li>
+          <li><a href="/pages/tbd">被後見人一覧</a></li>
+      </ul>
+  <!-- 右寄せになる部分 ================ -->
+      <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "新規登録", new_guardian_path %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- ヘッダー部分 終わり========== -->
+
+<div class="container" style="padding:20px 0">
+  <%= form_for @record do |f| %>
+    <div class="form-group">
+      <h1>訪問記録</h1>
+      <%= label_tag :ward_name, '被後見人名', :class => 'control-label'  %>
+      <%= f.text_field :ward_name, :class => 'form-control', :placeholder => 'name' %>
+
+      <%= label_tag :date, '日付', :class => 'control-label'  %>
+      <%= f.text_field :date, :class => 'form-control', :placeholder => 'date' %>
+
+      <%= label_tag :activity, '実施内容', :class => 'control-label'  %>
+      <%= f.text_field :activity, :class => 'form-control', :placeholder => 'activity' %>
+
+      <%= label_tag :memo, '訪問メモ', :class => 'control-label'  %>
+      <%= f.text_field :memo, :class => 'form-control', :placeholder => 'memo' %>
+
+      <%= label_tag :comment, '備考', :class => 'control-label'  %>
+      <%= f.text_field :comment, :class => 'form-control', :placeholder => 'comment' %>
+
+      <%= label_tag :photo, '写真', :class => 'control-label'  %>
+      <%= f.text_field :photo, :class => 'form-control', :placeholder => 'photo' %>
+    </div>
+  <div class="form-group">
+    <%= f.submit "保存" , :class => 'btn btn-primary' %>
+  </div>
+ <% end %>
+</div>
