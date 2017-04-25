@@ -3,7 +3,8 @@
 * Rails 4.2.8
 * Ruby 2.3.1p112
 * gem 2.5.1
-* PostgreSQLs
+* PostgreSQL
 
 * guardian：後見人
 * ward：被後見人
+* record:訪問記録
