@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'logins#new'
+
   get 'pages/tbd'
   get 'pages/tbd1'
 
