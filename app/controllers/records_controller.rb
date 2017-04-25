@@ -11,6 +11,7 @@ class RecordsController < ApplicationController
   @record = Record.new(record_params)
   @record.guardian_id = session[:guardian_id]
   @record.save
+  redirect_to records_path
   end
 
 private
