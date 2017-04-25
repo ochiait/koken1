@@ -1,5 +1,12 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
+  def current_guardian
+    if session[:guardian_id]
+      # @current_guardianがnilかfalseならログインユーザーを代入
+      @current_guardian ||= Guardian.find(session[:guardian_id])
+    end
+  end
+
+  helper_method :current_guardian
 end

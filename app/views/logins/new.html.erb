@@ -1,0 +1,37 @@
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+  <!-- ヘッダー部分 ================ -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="<%=  %>">成年後見人業務サポートサービス</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_target">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<!-- 右寄せになる部分 ================ -->
+    <ul class="nav navbar-nav navbar-right">
+      <!-- リンクのみ -->
+        <li><%= link_to "新規登録", new_guardian_path %></li>
+    </ul>
+  </div>
+</div>
+</nav>
+<!-- ヘッダー部分 終わり========== -->
+
+<div class="container" style="padding:20px 0">
+ <%= form_tag login_path do %>
+    <div class="form-group">
+      <h1>ログイン</h1>
+      <%= label_tag :email, 'メールアドレス', :class => 'control-label'  %>
+      <%= text_field_tag :email, params[:email], :class => 'form-control', :placeholder => 'email' %>
+      <%= label_tag :pass, 'パスワード', :class => 'control-label'  %>
+      <%= text_field_tag :pass, params[:pass], :class => 'form-control', :placeholder => 'password' %>
+    </div>
+    <div class="form-group">
+      <%= submit_tag "ログイン" , :class => 'btn btn-primary' %>
+    </div>
+ <% end %>
+</div>
