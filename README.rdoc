@@ -4,3 +4,6 @@
 * Ruby 2.3.1p112
 * gem 2.5.1
 * PostgreSQLs
+
+* guardian：後見人
+* ward：被後見人
