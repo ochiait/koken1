@@ -15,6 +15,10 @@
 * gem 2.5.1
 * PostgreSQL
 
+== URL
+* https://koken1.herokuapp.com/
+* https://travis-ci.com/ochiait/koken1
+
 == 用語
 * guardian：後見人
 * ward：被後見人
